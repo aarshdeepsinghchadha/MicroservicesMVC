@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.CouponAPI", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Web", "Mango.Web\Mango.Web.csproj", "{2ECBBC8A-87E8-4AC0-BFE9-5595E8899546}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.AuthAPI", "Mango.Services.AuthAPI\Mango.Services.AuthAPI.csproj", "{E27006E4-45A5-4379-8C28-42E1A83C366F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.AuthAPI", "Mango.Services.AuthAPI\Mango.Services.AuthAPI.csproj", "{E27006E4-45A5-4379-8C28-42E1A83C366F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.ProductAPI", "Mango.Services.ProductAPI\Mango.Services.ProductAPI.csproj", "{D2A920F3-A8B2-41A6-93F2-833359368DD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{E27006E4-45A5-4379-8C28-42E1A83C366F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E27006E4-45A5-4379-8C28-42E1A83C366F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E27006E4-45A5-4379-8C28-42E1A83C366F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A920F3-A8B2-41A6-93F2-833359368DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A920F3-A8B2-41A6-93F2-833359368DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A920F3-A8B2-41A6-93F2-833359368DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A920F3-A8B2-41A6-93F2-833359368DD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{EE6BE2EF-61C4-4529-8904-BCC0926FA333} = {1DAEBFD8-BDA8-4838-9994-4A3D3AC4C465}
 		{2ECBBC8A-87E8-4AC0-BFE9-5595E8899546} = {FC4274F0-109A-46A6-9A9D-FF5BC8521092}
 		{E27006E4-45A5-4379-8C28-42E1A83C366F} = {1DAEBFD8-BDA8-4838-9994-4A3D3AC4C465}
+		{D2A920F3-A8B2-41A6-93F2-833359368DD5} = {1DAEBFD8-BDA8-4838-9994-4A3D3AC4C465}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14DEBFE4-8A19-4FDE-B64C-D3A7BD416FAB}
