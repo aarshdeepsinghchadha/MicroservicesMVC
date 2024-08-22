@@ -1,4 +1,4 @@
-﻿@using Mango.Services.Web.Models
+﻿@using Mango.Web.Models
 @model CartDto
 @if(Model.CartHeader != null && Model.CartDetails?.Count() > 0){
 <form method="post" asp-action="EmailCart">
@@ -86,7 +86,7 @@
                     <button type="submit" class="btn btn-outline-danger form-control">Email Cart</button>
                 </div>
                 <div class="col-6 col-md-3 offset-md-6">
-                    <button class="btn btn-success form-control ">Checkout</button>
+                    <a asp-action="Checkout" class="btn btn-success form-control ">Looks Good? </a>
                 </div>
             </div>
         </div>

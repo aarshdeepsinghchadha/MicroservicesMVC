@@ -1,0 +1,6 @@
+
+
+GET {{Mango.Services.OrderAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
