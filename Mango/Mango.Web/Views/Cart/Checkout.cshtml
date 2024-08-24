@@ -64,7 +64,9 @@
                                 </div>
 
                                 <div class="col-3" style="font-size:11px;">
-                                    <span style="font-size:17px;">@cartObj.Product.Price.ToString("c")</span>
+                                    <span style="font-size:17px;">
+                                        @cartObj.Product.Price.ToString("C", new System.Globalization.CultureInfo("en-US"))
+                                    </span>
 
                                 </div>
                                 <div class="col-3" style="font-size:11px;">
@@ -76,9 +78,9 @@
 
                         <div class="row">
                             <div class="col-12 text-center pr-4 text-danger">
-                                Order Total :  @Model.CartHeader.CartTotal.ToString("c") <br />
+                                Order Total :  @Model.CartHeader.CartTotal.ToString("C", new System.Globalization.CultureInfo("en-US")) <br />
                                 @if(Model.CartHeader.Discount > 0) {
-                                <span class="text-success"> Order Discount :  @Model.CartHeader.Discount.ToString("c")</span>
+                                    <span class="text-success"> Order Discount :  @Model.CartHeader.Discount.ToString("C", new System.Globalization.CultureInfo("en-US"))</span>
                                 }
                             </div>
                         </div>

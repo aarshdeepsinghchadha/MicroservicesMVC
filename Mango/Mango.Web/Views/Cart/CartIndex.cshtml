@@ -45,7 +45,9 @@
                             <div style="font-size:11px;">@Html.Raw(@cartObj.Product.Description)</div>
                         </div>
                         <div class="col-3 col-md-2 pt-md-4" style="font-size:11px;">
-                            <span style="font-size:17px;">@string.Format("{0:c}", @cartObj.Product.Price)</span>
+                                <span style="font-size:17px;">
+                                    @string.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", cartObj.Product.Price)
+                                </span>
                         </div>
                         <div class="col-3 col-md-2 pt-md-4" style="font-size:11px;">
                             <span style="font-size:17px;"> @cartObj.Count</span>

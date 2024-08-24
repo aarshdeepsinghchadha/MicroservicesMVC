@@ -10,7 +10,9 @@
                     <h1 class="text-white">@Model.Name</h1>
                 </div>
                 <div class="col-12 col-md-6 text-end">
-                    <h1 class="text-warning">@string.Format("{0:c}", Model.Price)</h1>
+                    <h1 class="text-warning">
+                        @string.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", Model.Price)
+                    </h1>
                 </div>
             </div>
             <div class="card-body">

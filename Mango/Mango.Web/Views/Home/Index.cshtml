@@ -13,7 +13,9 @@
                         <img src="@product.ImageUrl" class="card-img-top">
                         <div class="card-body">
                             <div class="d-flex justify-content-between py-2">
-                                <span class="text-danger" style="font-size:20px;">@string.Format("{0:c}", product.Price)</span>
+                                <span class="text-danger" style="font-size:20px;">
+                                    @string.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", product.Price)
+                                </span>
                                 <span class="badge bg-warning text-white p-2">@product.CategoryName</span>
                             </div>
                             <p class="card-text">@Html.Raw(product.Description)</p>
