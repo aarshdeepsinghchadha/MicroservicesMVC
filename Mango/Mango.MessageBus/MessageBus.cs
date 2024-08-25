@@ -10,7 +10,7 @@ namespace Mango.MessageBus
 {
     public class MessageBus : IMessageBus
     {
-        private string connectionString = "";
+        private string connectionString = "Endpoint here";
         public async Task PublishMessage(object message, string topic_queue_Name)
         {
             await using var client = new ServiceBusClient(connectionString);
