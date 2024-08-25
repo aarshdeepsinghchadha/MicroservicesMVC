@@ -75,8 +75,7 @@ namespace Mango.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> ProductDelete(ProductDto productDto)
         {
-            if (ModelState.IsValid)
-            {
+            
                 ResponseDto? response = await _productService.DeleteProductAsync(productDto.ProductId);
 
                 if (response != null && response.IsSuccess)
@@ -88,7 +87,7 @@ namespace Mango.Web.Controllers
                 {
                     TempData["error"] = response?.Message;
                 }
-            }
+            
             return View(productDto);
         }
 

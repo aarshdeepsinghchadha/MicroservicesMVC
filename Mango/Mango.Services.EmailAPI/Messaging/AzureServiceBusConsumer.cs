@@ -99,10 +99,10 @@ namespace Mango.Services.EmailAPI.Messaging
             var message = args.Message;
             var body = Encoding.UTF8.GetString(message.Body);
 
-            CartDto objMessage = JsonConvert.DeserializeObject<CartDto>(body);
+            string objMessage = JsonConvert.DeserializeObject<string>(body);
             try
             {
-                await _emailService.EmailCartAndLog(objMessage);
+                await _emailService.RegisterUserEmailAndLog(objMessage);
                 await args.CompleteMessageAsync(args.Message);
             }
             catch (Exception ex)

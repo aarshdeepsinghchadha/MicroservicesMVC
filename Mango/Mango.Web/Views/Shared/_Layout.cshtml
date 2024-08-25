@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Mango.Web.Utility
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Mango.Web</title>
+    <title>@ViewData["Title"] - FoodMart</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -15,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Mango.Web</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FoodMart</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,16 +29,19 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Content Management
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" asp-controller="Coupon" asp-action="CouponIndex">Coupon</a></li>
-                                <li><a class="dropdown-item" asp-controller="Product" asp-action="ProductIndex">Product</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                            </ul>
-                        </li>
+                        @if (User.IsInRole(SD.RoleAdmin))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Content Management
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" asp-controller="Coupon" asp-action="CouponIndex">Coupon</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Product" asp-action="ProductIndex">Product</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                </ul>
+                            </li>
+                        }
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Order" asp-action="OrderIndex">
                                 Manage Order
