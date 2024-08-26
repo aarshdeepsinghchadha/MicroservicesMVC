@@ -1,6 +1,3 @@
-Certainly! Below is a detailed `README.md` file for your microservices project:
-
----
 
 # **Microservices Project with .NET 8, Ocelot, RabbitMQ, and Azure Service Bus**
 
